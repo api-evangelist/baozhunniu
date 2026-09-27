@@ -1,23 +1,65 @@
 aid: baozhunniu
+
 name: Baozhunniu
-description: 'Baozhunniu is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Baozhunniu (保准牛) is a Chinese insurance technology platform offering customized insurance solutions for enterprises and individuals. It provides a range of products such as group insurance, study abroad insurance, sports event coverage, and corporate risk management services. The platform integrates with major insurers, offers digital enrollment, claims assistance, and a user‑friendly portal for policy management, aiming to simplify insurance procurement and improve risk mitigation for businesses across various sectors.'
+
 url: https://raw.githubusercontent.com/api-evangelist/baozhunniu/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
-- Company
-apis: []
+- Insurance
+- Technology
+- Platform
+- China
+- B2B
+- B2C
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/baozhunniu-hosts.yml
+- type: SignUp
+  url: https://facade.bznins.com/user/register?service=https://www.bznins.com/index
+- type: PrivacyPolicy
+  url: https://bznpgi.bznins.com/file/api/out/show?filePath=/data/template/Documents/privacy.pdf
+- type: Newsroom
+  url: https://www.bznins.com/news/list
+- type: DomainSecurity
+  url: security/baozhunniu-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.bznins.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No public developer program or API documentation is available on the company's website.
+  evidence:
+    - url: https://www.bznins.com/
+      status: 200
+  checked: '2026-09-27'
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
