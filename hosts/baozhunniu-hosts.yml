@@ -1,0 +1,94 @@
+generated: '2026-09-27'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 7
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - identity
+  - legal
+  - other
+  - website
+hosts:
+- host: api.bznins.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: bznins.com
+  role: api
+  relation: own
+- host: bznpgi.bznins.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - PrivacyPolicy
+  serves: []
+  registrable_domain: bznins.com
+  role: legal
+  relation: own
+- host: facade.bznins.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - SignUp
+  serves: []
+  registrable_domain: bznins.com
+  role: identity
+  relation: own
+- host: login.bznins.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: bznins.com
+  role: identity
+  relation: own
+- host: oversea.bznins.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: bznins.com
+  role: other
+  relation: own
+- host: sports.bznins.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: bznins.com
+  role: other
+  relation: own
+- host: www.bznins.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Newsroom
+  - Website
+  serves: []
+  registrable_domain: bznins.com
+  role: website
+  relation: own
